@@ -51,6 +51,25 @@ Este proyecto es una aplicación PHP para gestionar riesgos. Incluye una clase `
         }
     }
     ```
+5. Configura el composer.json`composer.json`:
+
+    ```json
+    {
+        "autoload": {
+            "psr-4": {
+                "App\\": "src/"
+            }
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^11"
+        },
+        
+        "scripts": {
+            "test": "phpunit --bootstrap vendor/autoload.php test/RiesgoTest.php"
+        }
+    }
+
+    ```
 
 ## Ejecutar las pruebas
 
